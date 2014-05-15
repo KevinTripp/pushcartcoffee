@@ -1,0 +1,35 @@
+/* CURRENTLY IN: styles/main.css */
+/* nav styles */
+
+#navBar{
+	width: 100%;
+	padding:10px 0px;
+	position: fixed;
+	background-color: rgb(116,58,38);
+}
+#navList{
+	list-style: none;
+	overflow: hidden;
+}
+
+#title a, #navList li a{
+	text-decoration: none;
+	color: rgb(247,241,224);
+}
+
+#title{
+	font-size: 24px;
+	width: 40%;
+	float: left;
+	text-transform: uppercase;
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+#navList li a{
+	float: right;
+	font-size: 24px;
+	margin-right: 15px;
+}
+
+/* end nav styles */
