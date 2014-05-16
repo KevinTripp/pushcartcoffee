@@ -15,6 +15,9 @@ $('.select-chelsea').on('click',function(){
 $('#navList li a').on('click',function(e){
 	//prevents any defualt actions
 	e.preventDefault()
+	console.log(this.text)
+	console.log($('#' + this.text).offset())
+	console.log($('#' + this.text).offset().top)
 	$('body').animate({
 		//need to set the text to lowercase to match the id name
 		scrollTop:$('#' + this.text).offset().top - 65
