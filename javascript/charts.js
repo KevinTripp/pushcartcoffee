@@ -23,7 +23,7 @@
         ]);
 
         // Set chart options
-        var options = {'title':'What coffee was ordered yesterday?',
+        var options = {'title':'What types coffee were ordered yesterday?',
                        'width':500,
                        'height':300};
 

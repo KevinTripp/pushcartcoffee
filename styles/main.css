@@ -159,4 +159,37 @@ body{
 	width: 500px;
 }
 
+/* for android phones */
 
+@media only screen and (max-width: 480px){
+#title{
+	text-align: center;
+	float: none;
+	width: 100%;
+	padding: 0px;
+}
+
+#navList{
+	width: 100%;
+	float: none;
+	padding-left: 0px;
+}
+#navList li{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	float: none;
+	border-left: none;
+	border-bottom: 1px rgb(247,241,224) solid;
+	text-align: center;
+}
+.large-image{
+	display: none;
+}
+.about-text{
+	margin-top:200px;
+	height: 100%;
+	background-image: none;
+	padding-bottom: 20px;
+}
+}
