@@ -2,7 +2,9 @@
 /* nav styles */
 body{
 	background-color: rgb(87,50,31);
+	width: 100%;
 }
+
 #navBar{
 	font-size: 20px;
 	width: 100%;
@@ -10,10 +12,14 @@ body{
 	top: 0px;
 	position: fixed;
 	background-color: rgb(116,58,38);
+	border-bottom: 2px rgb(247,241,224) solid;
 }
 #navList{
+	float: left;
+	width: 50%;
 	overflow: hidden;
 	list-style: none;
+	padding-left: 7%;
 }
 
 #title a, #navList li a{
@@ -32,7 +38,7 @@ body{
 
 #navList li{
 	float: right;
-	margin-right:15px;
+	margin-right: 15px;
 	padding-left: 15px;
 	border-left: 1px rgb(247,241,224) solid;
 }
@@ -40,13 +46,89 @@ body{
 #navList #first-nav-item{
 	border: none;
 }
+#navList li a{
+	margin-top: 4px;
+	text-transform: capitalize;
+	display: inline-block;
+}
+#navList li a:hover{
+	color: rgb(228,219,195);
+}
 
 /* end nav styles */
-/* main images */
 
 .large-image{
-	margin-top: 50px;
+	margin-top: 55px;
 	background: url("http://pushcartcoffee.com/img/slide6.jpg") no-repeat;
-	background-size: 100%;
+	background-size: cover;
+	height: 610px;
+}
+
+.bottom-border{
+	border-bottom: 5px rgb(247,241,224) solid;
+}
+
+/* content slides */
+.content-slide{
+	width: 100%;
+}
+.about-text{
+	background-color: rgb(228,219,195);
+	background: url("http://pushcartcoffee.com/img/mission.jpg") no-repeat;
+	background-size: cover;
 	height: 600px;
+
+}
+.slide-text{
+	margin: 0px auto;
+	color:rgb(247,241,224);
+	font-size: 20px;
+	padding: 1%;
+	background-color: rgba(228,219,195,.2);
+	overflow: hidden;
+}
+
+.slide-text.about-text h2{
+	width: 20%;
+	margin: 0px auto;
+	padding: .5%;
+	font-size: 30px;
+	text-transform: uppercase;
+	width: 20%;
+}
+.slide-text.about-text p{
+	width: 80%;
+	margin: 0px auto;
+}
+
+.loaction{
+	background-color: rgb(247,241,224);
+}
+.event{
+	background-color: rgb(163,183,98);
+}
+.press{
+	background-color: rgb(116,58,38);
+}
+
+/* float*/
+.float-left{
+	float:left;
+}
+/* text effects */
+.capitalize{
+	text-transform: capitalize;
+}
+
+/* jquery handles */
+.hidden{
+	display: none;
+}
+#chart_div{
+	margin:0 auto;
+	width: 500px;
+}
+
+.contact{
+	margin: 0px 5%;
 }
