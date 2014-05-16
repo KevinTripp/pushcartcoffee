@@ -17,6 +17,6 @@ $('#navList li a').on('click',function(e){
 	e.preventDefault()
 	$('body').animate({
 		//need to set the text to lowercase to match the id name
-		scrollTop:$('#' + this.text.toString().toLowerCase()).offset().top - 65
+		scrollTop:$('#' + this.text).offset().top - 65
 	}, 1000);
 });
