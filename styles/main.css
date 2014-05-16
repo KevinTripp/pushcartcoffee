@@ -1,15 +1,19 @@
 /* CURRENTLY IN: styles/main.css */
 /* nav styles */
-
+body{
+	background-color: rgb(87,50,31);
+}
 #navBar{
+	font-size: 20px;
 	width: 100%;
-	padding:10px 0px;
+	padding:15px 0px;
+	top: 0px;
 	position: fixed;
 	background-color: rgb(116,58,38);
 }
 #navList{
-	list-style: none;
 	overflow: hidden;
+	list-style: none;
 }
 
 #title a, #navList li a{
@@ -18,7 +22,7 @@
 }
 
 #title{
-	font-size: 24px;
+	font-size: 30px;
 	width: 40%;
 	float: left;
 	text-transform: uppercase;
@@ -26,10 +30,23 @@
 	font-weight: bold;
 }
 
-#navList li a{
+#navList li{
 	float: right;
-	font-size: 24px;
-	margin-right: 15px;
+	margin-right:15px;
+	padding-left: 15px;
+	border-left: 1px rgb(247,241,224) solid;
+}
+
+#navList #first-nav-item{
+	border: none;
 }
 
 /* end nav styles */
+/* main images */
+
+.large-image{
+	margin-top: 50px;
+	background: url("http://pushcartcoffee.com/img/slide6.jpg") no-repeat;
+	background-size: 100%;
+	height: 600px;
+}
