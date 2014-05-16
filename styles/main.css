@@ -84,7 +84,7 @@ body{
 	color:rgb(247,241,224);
 	font-size: 20px;
 	padding: 1%;
-	background-color: rgba(228,219,195,.2);
+	background-color: rgb(116,58,38);
 	overflow: hidden;
 }
 
@@ -102,8 +102,27 @@ body{
 }
 
 .loaction{
-	background-color: rgb(247,241,224);
+	background-color: rgb(87,50,31);
 }
+
+.store-buttons{
+	width: 50%;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.store-button{
+	float: left;
+	width: 48%;
+	background-color: rgb(247,241,224);
+	font-size: 20px;
+	text-align: center;
+	border: 1px solid rgb(116,58,38);
+	color: rgb(116,58,38);
+}
+.store-button:hover{
+	background-color: rgb(228,219,195);
+}
+
 .event{
 	background-color: rgb(163,183,98);
 }
@@ -119,16 +138,25 @@ body{
 .capitalize{
 	text-transform: capitalize;
 }
-
-/* jquery handles */
-.hidden{
-	display: none;
-}
-#chart_div{
-	margin:0 auto;
-	width: 500px;
+.name, .hours, .contact{
+	text-align: center;
+	width: 45%;
+	margin: 0 auto;
 }
 
 .contact{
 	margin: 0px 5%;
 }
+
+/* jquery handles */
+.hidden{
+	display: none;
+}
+
+/* charts styles */
+#chart_div{
+	margin:0 auto;
+	width: 500px;
+}
+
+
