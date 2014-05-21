@@ -23,11 +23,18 @@
         ]);
 
         // Set chart options
-        var options = {'title':'What types coffee were ordered yesterday?',
-                       'width':500,
+        var options = {'title':'What types of coffee were ordered yesterday?',
+                       'width':350,
                        'height':300};
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
+        var chart = new google.visualization.BarChart(document.getElementById('bar_chart_div'));
+        chart.draw(data, options);
+        var chart = new google.visualization.LineChart(document.getElementById('line_chart_div'));
+        chart.draw(data, options);
+
+
+
       }

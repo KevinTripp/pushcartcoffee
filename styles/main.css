@@ -135,6 +135,10 @@ body{
 	background-color: rgb(163,183,98);
 	padding: 5px auto;
 }
+.chart{
+	width: 23%;
+	margin: 4%;
+}
 
 
 /* float*/
@@ -158,12 +162,6 @@ body{
 /* jquery handles */
 .hidden{
 	display: none;
-}
-
-/* charts styles */
-#chart_div{
-	margin:2% auto;
-	width: 500px;
 }
 
 /* for android phones */
