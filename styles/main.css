@@ -68,6 +68,10 @@ body{
 	border-bottom: 5px rgb(247,241,224) solid;
 }
 
+#map-chelsea, #map-petersfield{
+	height: 600px;
+}
+
 /* content slides */
 .content-slide{
 	width: 100%;
@@ -123,12 +127,11 @@ body{
 	background-color: rgb(228,219,195);
 }
 
-.event{
+.coffee{
 	background-color: rgb(163,183,98);
+	padding: 5px auto;
 }
-.press{
-	background-color: rgb(116,58,38);
-}
+
 
 /* float*/
 .float-left{
@@ -155,7 +158,7 @@ body{
 
 /* charts styles */
 #chart_div{
-	margin:0 auto;
+	margin:2% auto;
 	width: 500px;
 }
 

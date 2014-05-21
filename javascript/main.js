@@ -1,11 +1,17 @@
 /* CURRENTLY IN: javascript/main.js */
-     
+ 
+var map;
+
 $('.select-petersfield').on('click',function(){
+	console.log('************************************')
 	$('.chelsea').slideToggle();
 	$('.petersfield').slideToggle();
-	//inject html iframe due to an issue with display:none and interfering with the google map iframe dimensions 
-	$('.map-petersfield').html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.1545348836753!2d-73.98148300000004!3d40.73662499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2590aecc90547%3A0x1ce08f4efba3ec40!2sPushcart+Coffee!5e0!3m2!1sen!2sus!4v1400260848433" width="100%" height="600" frameborder="0" style="border:0"></iframe>');
-})
+	getMap('362 2nd Ave,New York, NY','map-canvas','Pushcart Coffee Peters field');
+	console.log('petersfield complete');
+	lastCenter=map.getCenter(); 
+	google.maps.event.trigger(map, 'resize');
+	map.setCenter(lastCenter);
+});
 
 $('.select-chelsea').on('click',function(){
 	$('.petersfield').slideToggle();
@@ -20,3 +26,63 @@ $('#navList li a').on('click',function(e){
 		scrollTop: $('#' + $(this).text()).offset().top - 65
 	}, 1000);
 });
+
+
+function getMap(address, elementId, nameOfLocation){
+	//key for google maps to work
+	var id = 'AIzaSyAqB0Oju84S-3pjqi6-qoNHDTvGLSTFL50';
+	//constructiing the url to be used later
+	var url = 'http://maps.googleapis.com/maps/api/geocode/json?address='
+		+ address
+		+ '&sensor=false&key'
+		+ id
+
+	console.log(url)
+	//creating the variables to save the lat and long to after the ajax call
+	var lat = "";
+	var lng = "";
+	//ajax call to get the lat and long cords of the address
+	$.ajax({
+		url: url
+		, success: function(data){
+		//getting the lat and long
+		lat = data.results[0].geometry.location.lat;
+		lng = data.results[0].geometry.location.lng;
+
+		console.log(lat, lng)
+
+		var myLatlng = new google.maps.LatLng(lat, lng);
+		console.log(myLatlng)
+
+		console.log('created map variable' + nameOfLocation)
+
+		function initialize() {
+			//constructing the map options
+			var mapOptions = {
+			    zoom: 17,
+			    center: myLatlng,
+			    scrollwheel: false
+			  };
+			  console.log('created map options'+ nameOfLocation)
+			  //constructing the map to be displayed
+			  map = new google.maps.Map(document.getElementById(elementId)
+			  	, mapOptions);
+			  console.log('created map'+ nameOfLocation)
+			//creating the marker for the business location
+			var marker = new google.maps.Marker({
+      				position: myLatlng,
+      				map: map,
+     				title: nameOfLocation
+  			});
+  			console.log('created marker'+ nameOfLocation)
+
+		}
+		//calling the map api to create and display the map
+		google.maps.event.addDomListener(window, 'load', initialize);
+		console.log('created and loaded the map'+ nameOfLocation)
+  }});
+}
+//loading the chelsea map by defualt
+getMap('401+W+25th+St,+New+York,+NY,+10001','map-chelsea','Pushcart Coffee @ chelsea');
+getMap('362+2nd+Ave,New+York,+NY','map-petersfield','Pushcart Coffee Peters field');
+
