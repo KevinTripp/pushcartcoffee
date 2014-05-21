@@ -6,6 +6,7 @@ body{
 }
 
 #navBar{
+	z-index: 1000;
 	font-size: 20px;
 	width: 100%;
 	padding:15px 0px;
@@ -59,9 +60,12 @@ body{
 
 .large-image{
 	margin-top: 55px;
-	background: url("http://pushcartcoffee.com/img/slide6.jpg") no-repeat;
-	background-size: cover;
 	height: 610px;
+}
+
+.large-image ul li img{
+	width: 100%;
+	height: 600px;
 }
 
 .bottom-border{

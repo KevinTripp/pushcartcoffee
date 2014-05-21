@@ -1,5 +1,11 @@
 /* CURRENTLY IN: javascript/main.js */
- 
+
+$('.bxslider').bxSlider({
+	 auto: true,
+	 pager: false,
+	 controls: false
+});
+
 var map;
 
 $('.select-petersfield').on('click',function(){
@@ -77,4 +83,3 @@ function getMap(address, elementId, nameOfLocation){
 getMap('401+W+25th+St,+New+York,+NY,+10001','map-chelsea','Pushcart Coffee @ chelsea');
 //loading the petersfield map by defualt
 getMap('362 2nd Ave,New York, NY','map-petersfield','Pushcart Coffee Peters field');
-
