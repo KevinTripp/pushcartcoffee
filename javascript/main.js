@@ -15,6 +15,7 @@ $('.select-petersfield').on('click',function(){
 $('.select-chelsea').on('click',function(){
 	$('.petersfield').slideToggle();
 	$('.chelsea').slideToggle();
+	getMap('401+W+25th+St,+New+York,+NY,+10001','map-chelsea','Pushcart Coffee @ chelsea');
 	//fixes and issue where the map isn't displayed properly due to the div being hidden on load
 	lastCenter=map.getCenter(); 
 	google.maps.event.trigger(map, 'resize');
