@@ -132,8 +132,9 @@ body{
 }
 
 .coffee{
-	background-color: rgb(163,183,98);
+	background-color: rgb(247,241,224));
 	padding: 5px auto;
+	overflow: hidden;
 }
 .chart{
 	width: 23%;
@@ -207,6 +208,9 @@ body{
 .slide-text{
 	font-size: 20px;
 	padding: 0;
+}
+.chart{
+	float: none;
 }
 
 }
